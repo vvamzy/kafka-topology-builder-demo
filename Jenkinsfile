@@ -8,7 +8,6 @@ pipeline {
       stage('verify-replication-factor') {
          steps {
              sh 'checks/verify-replication-factor.sh ${TopologyFiles} 3'
-             sh 'whoami'
          }
       }
       stage('verify-num-of-partitions') {
